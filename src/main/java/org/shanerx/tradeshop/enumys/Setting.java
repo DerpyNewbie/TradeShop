@@ -64,7 +64,11 @@ public enum Setting {
 	ALLOW_METRICS("allow-metrics"),
 	ENABLE_DEBUG("enable-debug"),
 	MAX_SHOPS_PER_CHUNK("max-shops-per-chunk"),
-	MAX_ITEMS_PER_TRADE_SIDE("max-items-per-trade-side");
+	MAX_ITEMS_PER_TRADE_SIDE("max-items-per-trade-side"),
+
+	PLUGIN_PREFIX("plugin-prefix")
+	;
+
 
 	private static TradeShop plugin = (TradeShop) Bukkit.getPluginManager().getPlugin("TradeShop");
 	private static File file = new File(plugin.getDataFolder(), "config.yml");
@@ -115,6 +119,8 @@ public enum Setting {
 		addSetting(BITRADESHOP_HEADER.path, "BiTrade");
 		addSetting(BITRADESHOP_EXPLODE.path, false);
 		addSetting(BITRADESHOP_HOPPER_EXPORT.path, false);
+
+		addSetting(PLUGIN_PREFIX.path, "&a[&eTradeShop&a] ");
 
 		save();
 	}

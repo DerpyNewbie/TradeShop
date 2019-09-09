@@ -1,5 +1,8 @@
 # TradeShop
+## Description
+This is forked version to add ability to change prefixes in this plugin.
 
+# Original README
 ## Description
 This plugin manages how players trade one item for another. The concept behind it is very simple, you just place a chest and a sign on top, then write all the information on the sign.
 

@@ -59,10 +59,10 @@ import java.util.logging.Level;
  */
 public class Utils {
 
-	protected final String PREFIX = "&a[&eTradeShop&a] ";
 	private final UUID KOPUUID = UUID.fromString("daf79be7-bc1d-47d3-9896-f97b8d4cea7d");
-	private final UUID LORIUUID = UUID.fromString("e296bc43-2972-4111-9843-48fc32302fd4");
-	protected TradeShop plugin = (TradeShop) Bukkit.getPluginManager().getPlugin("TradeShop");
+    private final UUID LORIUUID = UUID.fromString("e296bc43-2972-4111-9843-48fc32302fd4");
+    protected String PREFIX = Setting.getConfig().getString(Setting.PLUGIN_PREFIX.toPath());
+    protected TradeShop plugin = (TradeShop) Bukkit.getPluginManager().getPlugin("TradeShop");
 	protected PluginDescriptionFile pdf = plugin.getDescription();
 
 	public Utils() {

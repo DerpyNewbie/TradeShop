@@ -92,7 +92,7 @@ public enum Message {
 	private static TradeShop plugin = (TradeShop) Bukkit.getPluginManager().getPlugin("TradeShop");
 	private static File file = new File(plugin.getDataFolder(), "messages.yml");
 	private static FileConfiguration config = YamlConfiguration.loadConfiguration(file);
-	protected final String PREFIX = "&a[&eTradeShop&a] ";
+	protected static String PREFIX = Setting.PLUGIN_PREFIX.getString();
 
 	public static void setDefaults() {
 		config = YamlConfiguration.loadConfiguration(file);
@@ -188,6 +188,7 @@ public enum Message {
 
 		setDefaults();
 		config = YamlConfiguration.loadConfiguration(file);
+		PREFIX = Setting.PLUGIN_PREFIX.getString();
 	}
 
 	public static FileConfiguration getConfig() {
