@@ -84,8 +84,8 @@ public class TradeShop extends JavaPlugin {
 			return;
 		}
 
-		Message.reload();
 		Setting.reload();
+		Message.reload();
 
 		lists = new ListManager();
 
@@ -104,17 +104,17 @@ public class TradeShop extends JavaPlugin {
 
 		boolean checkUpdates = Setting.CHECK_UPDATES.getBoolean();
 
-		if (checkUpdates) {
+/*		if (checkUpdates) {
 			new Thread(() -> new Updater(getDescription()).checkCurrentVersion()).start();
-		}
+		}*/
 
-		if (Setting.ALLOW_METRICS.getBoolean()) {
+/*		if (Setting.ALLOW_METRICS.getBoolean()) {
 			metrics = new Metrics(this);
 			getLogger().info("Metrics successfully initialized!");
 
 		} else {
 			getLogger().warning("Metrics are disabled! Please consider enabling them to support the authors!");
-		}
+		}*/
 
 		addonManager = new AddonManager(this);
 	}
